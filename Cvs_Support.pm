@@ -12,33 +12,32 @@ use Time::localtime;
 # subs that replaced file-constants
 # possible, local_dev and fw_test could remain constants
 # however, PROJ_NAME should be stored over here
-sub DEV()  { return "\\\\pawpidw2\\CFSites\\" } ;
-#sub DEV()  { return "e:\\tmp\\esis_test\\" } ;
+sub DEV()  { return "\\\\dev_server\\CFSites\\" } ;
 
-sub TEST()    { return "\\\\nykwidw3\\ACEESISTest\\" } ;
+sub TEST()    { return "\\\\test_server\\ACEESISTest\\" } ;
 
-sub CODE_RELEASE() { return "\\\\pawpicr17\\FWShare\\CodeRelease\\" } ;
+sub CODE_RELEASE() { return "\\\\path_to\\CodeRelease\\" } ;
 
-sub PROJ_NAME()  { return "ACE_ESIS_Netview" }; #Update to match project
+sub PROJ_NAME()  { return "proj_name" }; #Update to match project
 
 
 sub get_projectfiles {
   # list of project files (2-d array)
   # ["<sub-dir\\", "<filename.ext>"]
 
-  my @list = ( ["ACEESISDev\\AJAX\\",		 "lookupClaimNumberDataAPL.cfm"],
+  my @list = ( ["root\\AJAX\\",		 "lookupClaimNumberDataAPL.cfm"],
                ["",				 "lookupClaimNumberDataWC.cfm"],
                ["",				 "updateClaimNumber.cfm"],
                ["",				 "verifyClaimNumberAPL.cfm"],
                ["",				 "verifyClaimNumberWC.cfm"],
 
-               ["ACEESISDev\\",			 "Application.cfm"],
+               ["root\\",			 "Application.cfm"],
                ["",				 "index.cfm"],
                ["",				 "login_action.cfm"],
                ["",				 "logout.cfm"],
                ["",				 "timeout.cfm"],
 
-               ["ACEESISDev\\secure\\workflow\\ESIS",
+               ["root\\secure\\workflow\\ESIS",
 		                                 "changeQueue_action.cfm"],
                ["",				 "leftnav.cfm"],
                ["",				 "sendToIndexing_action.cfm"],
