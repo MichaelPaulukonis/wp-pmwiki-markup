@@ -1,0 +1,148 @@
+/*
+  WP PmWiki Markup css
+*/
+
+// pm-core.css
+/* pmwiki-core styles */
+
+/* wikistyles */
+
+
+.pmwiki_content .frame  { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+.pmwiki_content .lfloat { float:left; margin-right:0.5em; }
+.pmwiki_content .rfloat { float:right; margin-left:0.5em; }
+
+.pmwiki_content {
+    line-height: 12px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pmwiki_content ol, .pmwiki_content ul {
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
+
+}
+
+.pmwiki_content li {
+  margin-top: 2px;
+  padding-top: 0px;
+}
+
+.pmwiki_content h1 a, 
+.pmwiki_content h2 a,
+.pmwiki_content h3 a,
+.pmwiki_content h4 a,
+.pmwiki_content h5 a  {
+    padding: 0 0 0 0;
+}
+
+/* pmwiki */
+.pmwiki_content pre, .pmwiki_content dl, .pmwiki_content p { 
+   margin-top:0px; 
+   margin-bottom:0px; 
+   padding: 0px; }
+
+.pmwiki_content code { white-space: nowrap; }
+.vspace { margin: 0,0,0,0; }.pmwiki_content
+.indent { margin-left:40px; }-.pmwiki_content
+.outdent { margin-left:40px; text-indent:-40px; }-.pmwiki_content
+a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+a.createlink { text-decoration:none; position:relative; top:-0.5em;
+  font-weight:bold; font-size:smaller; border-bottom:none; }
+img { border:0px; }
+
+.pmwiki_content h1, .pmwiki_content h2, .pmwiki_content h3, 
+.pmwiki_content h4, .pmwiki_content h5, .pmwiki_content h6 { 
+			font-weight:500; 
+			line-height:133%;
+}
+
+.pmwiki_content h1, h2, h3, h4, h5, h6 {
+		margin:0.25em 0 0 0; }
+
+.pmwiki_content h1 { font-size:2.1em; letter-spacing:.02em; }
+.pmwiki_content h2 { font-size:1.9em !important; margin-bottom:0.2em; }
+.pmwiki_content h3 { font-size:1.5em; }
+.pmwiki_content h4 { font-size:1.3em; font-style:italic }
+.pmwiki_content h5 { font-size:1.1em; }
+.pmwiki_content h6 { font-size:1.0em; font-variant:small-caps;}
+
+.clip, .news {
+    background: url("/projects/xradiograph.com/wiki/pub/skins/triad/images/silver-left.jpg") repeat-y scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    margin-top: 5px;
+    padding: 3px 8px;
+}
+
+.lrindent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* markup */
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+
+/* q&a */
+p.question { margin-top: 2.0em; }
+p.question:first-letter {
+    float: left;
+    font-family: Old English, Georgia, serif;
+    color: #777777;
+    font-size: 200%;
+    line-height: 1.0em;
+    margin-right: 0.2em; }
+
+/* CSS Document */
+/*
+#===============================================================================
+# layout-main.css  for FixFlow
+#===============================================================================
+# Copyright (c) 2004 Hans Bracker. All rights reserved.
+#
+# Defines the CSS for gemini and fixflow skins
+#
+# This file is part of the PmWiki gemini & fixflow skins; you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the License,
+# or (at your option) any later version.
+#===============================================================================*/
+
+/*================= Content =======================*/
+
+.pmwiki_content p { font-size:1em }
+
+.pmwiki_content ol { list-style-image: none; }
+
+hr {	height: 1px;
+		color: black;
+		background-color: black;
+		margin-left: auto;
+		margin-right: auto;
+		}
+.pmwiki_content .bquote {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	background: #f9f9f9;
+	margin: 1em 2em;
+	padding: .5em 2em;
+	font-family: "Trebuchet MS", sans-serif;
+}
+span.qsource {
+	float:right;
+	font-style:italic;
+}
+.cite  {
+	padding:0em 0em;
+	text-align:right;
+	font-size:0.9em;
+	font-style:italic;
+	color:#666666;
+}
