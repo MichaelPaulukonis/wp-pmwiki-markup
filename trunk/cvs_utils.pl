@@ -1,6 +1,6 @@
 # Michael Paulukonis
 # Nov 26, 2007 - Jan 2010
-# http://pmwiki.divintech.com/pmwiki.php?n=IT.UsingCVS#Scripting
+# this is included as past-code example for a dev-to-production script
 
 use strict;
 use warnings;
