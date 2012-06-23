@@ -1,0 +1,9 @@
+#summary Where are we going
+
+Better CSS
+Integrate into Wordpress admin panel
+
+
+
+Look into retrieving some CSS from pmwiki
+Look into retrieving some javascript from pmwiki
