@@ -1,18 +1,18 @@
 #summary Where are we going
 
-  *Better CSS
-  *Integrate into Wordpress admin panel
-  *expose options (currently several things are hard-coded as "off")
+  * Better CSS
+  * Integrate into Wordpress admin panel
+  * expose options (currently several things are hard-coded as "off")
     ** TODO: document what these are!
 
-  *error-handling
-  *verify pmwiki-url from admin panel
+  * error-handling
+  * verify pmwiki-url from admin panel
 
 
-  *Look into retrieving some CSS from pmwiki
-  *Look into retrieving some javascript from pmwiki
+  * Look into retrieving some CSS from pmwiki
+  * Look into retrieving some javascript from pmwiki
 
 
-  *install a local copy of pmwiki?
-    **this is actually done by the fswiki plugin.
-    **for fswiki, this is a laaaaaarge payload
+  * install a local copy of pmwiki?
+    ** this is actually done by the fswiki plugin.
+    ** for fswiki, this is a laaaaaarge payload
