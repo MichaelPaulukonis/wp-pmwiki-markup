@@ -8,7 +8,7 @@
     Author URI: http://www.xradiograph.com
   */
 
-  /*  Copyright 2009-2010 Jun Futagawa
+  /*  Copyright 2012-2013 Michael Paulukonis
 
       This program is free software; you can redistribute it and/or modify
       it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ class WP_PmWiki_Markup
 
 	var $url = '';
 	var $path = '';
-	var $convertCount = 0; // for navigateor_id
+	var $convertCount = 0;
 
 	function getInstance() {
 		static $plugin = null;
@@ -44,9 +44,11 @@ class WP_PmWiki_Markup
 
 	function init() {
 
-    $serviceroot = '[-placeholder-]'; // populate with the full path to pmwiki.php
+                // TODO: this should be populated via control-panel.
+                // one of these days....
+                $serviceroot = '[-placeholder-]'; // populate with the full path to pmwiki.php
 
-    $this->servicecall = $serviceroot.'/pmwiki.php?action=wikimarkup&wikitext=';
+                $this->servicecall = $serviceroot.'/pmwiki.php?action=wikimarkup&wikitext=';
 		$this->url = get_bloginfo('url').'/wp-content/plugins/'.end(explode(DIRECTORY_SEPARATOR, dirname(__FILE__)));
 		add_action('wp_head', array($this,'head'));
 
@@ -55,14 +57,14 @@ class WP_PmWiki_Markup
 	}
 
 	function head() {
-    ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo $this->url?>/pmwiki.css"/>
-      <?php
-      }
+                ?>
+                <link rel="stylesheet" type="text/css" href="<?php echo $this->url?>/pmwiki.css"/>
+                        <?php
+                        }
 
 	function the_content($str) {
 		$replace = 'return wp_pmwiki($matches[1]);';
-    // TODO: not respecting <pre> code-blocks....
+                // TODO: not respecting <pre> code-blocks....
 		return preg_replace_callback('/\[pmwiki\](.*?)\[\/pmwiki\]/s',create_function('$matches',$replace),$str);
 	}
 
@@ -73,26 +75,26 @@ class WP_PmWiki_Markup
 
 	function convert_html($text) {
 
-    $ch = curl_init();
+                $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, $this->servicecall.urlencode($text));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                curl_setopt($ch, CURLOPT_URL, $this->servicecall.urlencode($text));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-    $result = curl_exec($ch);
+                $result = curl_exec($ch);
 
-    return $result;
+                return $result;
 
-  }
+        }
 }
 
 add_action('init', 'pmwiki_init');
 function pmwiki_init() {
-  $p = WP_PmWiki_Markup::getInstance();
-  $p->init();
+        $p = WP_PmWiki_Markup::getInstance();
+        $p->init();
 }
 
 function wp_pmwiki($text) {
-  $p = WP_PmWiki_Markup::getInstance();
-  return $p->convert($text);
+        $p = WP_PmWiki_Markup::getInstance();
+        return $p->convert($text);
 }
 
